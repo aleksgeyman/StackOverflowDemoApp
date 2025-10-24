@@ -42,7 +42,7 @@ class UserCell: UITableViewCell {
     
     func setData(_ userData: UserCellModel) {
         self.userData = userData
-        nameLabel.text = String(userData.id)
+        nameLabel.text = String(userData.name)
         reputationLabel.text = String(userData.reputation)
         setButtonState(isFollowed: userData.isFollowed)
     }

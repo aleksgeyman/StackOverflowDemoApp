@@ -35,8 +35,12 @@ final class UsersListViewModel {
         }
     }
     
-    func getUser(at index: Int) -> UserCellModel {
-        users[index]
+    func getUser(at index: Int) -> UserCellModel? {
+        guard index >= 0 && index < usersCount else {
+            return nil
+        }
+        
+        return users[index]
     }
     
     private func setUsers(_ usersResponse: [UserModel]) {
@@ -55,7 +59,6 @@ final class UsersListViewModel {
 extension UsersListViewModel: UserCellDelegate {
     
     func onAction(id: Int, isFollowed: Bool) {
-        print(#function, id, isFollowed)
         persistence.setFollowed(id: id, isFollowed: isFollowed)
         persistence.storeToPersistence()
     }

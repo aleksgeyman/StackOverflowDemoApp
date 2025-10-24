@@ -58,12 +58,13 @@ extension UsersListViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = self.tableView.dequeueReusableCell(withIdentifier: UserCell.IDENTIFIER) as? UserCell else {
+        guard let cell = self.tableView.dequeueReusableCell(withIdentifier: UserCell.IDENTIFIER) as? UserCell,
+              let user = viewModel.getUser(at: indexPath.row) else {
             return UITableViewCell()
         }
         
         cell.delegate = viewModel
-        cell.setData(viewModel.getUser(at: indexPath.row))
+        cell.setData(user)
         return cell
     }
 }
