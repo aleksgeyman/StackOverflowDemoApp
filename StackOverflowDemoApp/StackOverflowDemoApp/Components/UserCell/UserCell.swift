@@ -8,10 +8,11 @@
 import UIKit
 
 protocol UserCellDelegate {
-    func onAction()
+    func onAction(id: Int, isFollowed: Bool)
 }
 
 class UserCell: UITableViewCell {
+    static let IDENTIFIER = "UserCell"
     
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -27,7 +28,7 @@ class UserCell: UITableViewCell {
         }
         
         userData.isFollowed.toggle()
-        delegate?.onAction()
+        delegate?.onAction(id: userData.id, isFollowed: userData.isFollowed)
         setButtonState(isFollowed: userData.isFollowed)
     }
     
@@ -41,7 +42,7 @@ class UserCell: UITableViewCell {
     
     func setData(_ userData: UserCellModel) {
         self.userData = userData
-        nameLabel.text = userData.name
+        nameLabel.text = String(userData.id)
         reputationLabel.text = String(userData.reputation)
         setButtonState(isFollowed: userData.isFollowed)
     }
