@@ -24,6 +24,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		085014CB2EAB9E64001F08DA /* StackOverflowDemoApp.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = StackOverflowDemoApp.xctestplan; sourceTree = "<group>"; };
 		085CF4172EAB92CC00E06A24 /* StackOverflowDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackOverflowDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		085CF42D2EAB92CD00E06A24 /* StackOverflowDemoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StackOverflowDemoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		085CF4372EAB92CD00E06A24 /* StackOverflowDemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StackOverflowDemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +89,7 @@
 		085CF40E2EAB92CB00E06A24 = {
 			isa = PBXGroup;
 			children = (
+				085014CB2EAB9E64001F08DA /* StackOverflowDemoApp.xctestplan */,
 				085CF4192EAB92CC00E06A24 /* StackOverflowDemoApp */,
 				085CF4302EAB92CD00E06A24 /* StackOverflowDemoAppTests */,
 				085CF43A2EAB92CD00E06A24 /* StackOverflowDemoAppUITests */,

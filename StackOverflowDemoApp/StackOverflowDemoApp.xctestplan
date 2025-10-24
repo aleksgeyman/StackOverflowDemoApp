@@ -1,0 +1,35 @@
+{
+  "configurations" : [
+    {
+      "id" : "5740B09B-3308-4E69-8417-5940FD2514DA",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:StackOverflowDemoApp.xcodeproj",
+      "identifier" : "085CF4162EAB92CC00E06A24",
+      "name" : "StackOverflowDemoApp"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:StackOverflowDemoApp.xcodeproj",
+        "identifier" : "085CF42C2EAB92CD00E06A24",
+        "name" : "StackOverflowDemoAppTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:StackOverflowDemoApp.xcodeproj",
+        "identifier" : "085CF4362EAB92CD00E06A24",
+        "name" : "StackOverflowDemoAppUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
