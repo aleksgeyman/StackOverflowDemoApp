@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" rowHeight="106" id="KGk-i7-Jjw" customClass="UserCell" customModule="StackOverflowDemoApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="584" height="106"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="584" height="106"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kyy-zP-gEY">
+                        <rect key="frame" x="16" y="16" width="64" height="64"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="64" id="LHv-mM-e9N"/>
+                            <constraint firstAttribute="height" constant="64" id="YrY-Md-ub4"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gS-vh-B1r" userLabel="nameLabel">
+                        <rect key="frame" x="96" y="16" width="472" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bk3-8u-aZB" userLabel="reputationLabel">
+                        <rect key="frame" x="96" y="59" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p5r-SV-9oq" userLabel="followButton">
+                        <rect key="frame" x="485" y="52" width="75" height="35"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                        <connections>
+                            <action selector="onTapAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="piZ-TT-bP9"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="4gS-vh-B1r" firstAttribute="leading" secondItem="kyy-zP-gEY" secondAttribute="trailing" constant="16" id="CdM-DN-iiu"/>
+                    <constraint firstItem="bk3-8u-aZB" firstAttribute="leading" secondItem="kyy-zP-gEY" secondAttribute="trailing" constant="16" id="TCu-VG-XCA"/>
+                    <constraint firstAttribute="trailing" secondItem="p5r-SV-9oq" secondAttribute="trailing" constant="16" id="TrO-QB-HBB"/>
+                    <constraint firstAttribute="trailing" secondItem="4gS-vh-B1r" secondAttribute="trailing" constant="16" id="Uhv-k5-awP"/>
+                    <constraint firstItem="kyy-zP-gEY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="aT1-Rk-uKA"/>
+                    <constraint firstAttribute="bottom" secondItem="kyy-zP-gEY" secondAttribute="bottom" constant="16" id="fhZ-ja-lsH"/>
+                    <constraint firstItem="kyy-zP-gEY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="j2W-Hn-CgI"/>
+                    <constraint firstAttribute="bottom" secondItem="p5r-SV-9oq" secondAttribute="bottom" constant="16" id="ryT-cU-8kr"/>
+                    <constraint firstItem="4gS-vh-B1r" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="tVm-YS-Lc4"/>
+                    <constraint firstAttribute="bottom" secondItem="bk3-8u-aZB" secondAttribute="bottom" constant="16" id="trI-TF-G7t"/>
+                    <constraint firstItem="kyy-zP-gEY" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="uIw-Ff-e4o"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="followButton" destination="p5r-SV-9oq" id="IK0-yO-gc3"/>
+                <outlet property="nameLabel" destination="4gS-vh-B1r" id="zdU-47-dV3"/>
+                <outlet property="reputationLabel" destination="bk3-8u-aZB" id="JaH-Cr-OEe"/>
+                <outlet property="userImage" destination="kyy-zP-gEY" id="U2R-yx-JBe"/>
+            </connections>
+            <point key="canvasLocation" x="331.29770992366412" y="-11.267605633802818"/>
+        </tableViewCell>
+    </objects>
+</document>
