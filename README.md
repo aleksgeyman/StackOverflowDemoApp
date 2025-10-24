@@ -1,2 +1,2 @@
 # StackOverflowDemoApp
-Demo project
+App is build using MVVM pattern, trying to use best and established practices. Persistence manager is used to store follow/unfollow functionality working with UserDefaults and covered with unit tests. Service is used to fetch users from remote URL, covered with unit tests. Separate data model and custom table view cell are created for representing stack overflow user data. Simple image caching is implemented to avoid unnecessary fetches.
