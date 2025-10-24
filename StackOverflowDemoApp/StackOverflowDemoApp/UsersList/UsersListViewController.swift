@@ -67,4 +67,8 @@ extension UsersListViewController: UITableViewDataSource, UITableViewDelegate {
         cell.setData(user)
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        128
+    }
 }

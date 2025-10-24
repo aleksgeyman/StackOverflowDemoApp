@@ -44,6 +44,10 @@ class UserCell: UITableViewCell {
         self.userData = userData
         nameLabel.text = String(userData.name)
         reputationLabel.text = String(userData.reputation)
+        if let url = URL(string: userData.imageURL) {
+            userImage.loadImage(from: url, placeholder: UIImage(systemName: "photo"))
+        }
+        
         setButtonState(isFollowed: userData.isFollowed)
     }
     
