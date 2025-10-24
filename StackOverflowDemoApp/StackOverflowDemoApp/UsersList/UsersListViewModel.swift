@@ -60,6 +60,7 @@ extension UsersListViewModel: UserCellDelegate {
     
     func onAction(id: Int, isFollowed: Bool) {
         persistence.setFollowed(id: id, isFollowed: isFollowed)
+        // TODO: Call only on app willResignActive or VC viewWillDisapper.
         persistence.storeToPersistence()
     }
 }
